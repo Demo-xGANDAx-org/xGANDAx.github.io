@@ -1,42 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-
-const translations = {
-  en: {
-    home: 'home',
-    about: 'about',
-    projects: 'projects',
-    contact: 'contact',
-    heroTitle: "Hi, I'm ",
-    heroRole: 'DevOps Engineer',
-    heroDesc: 'Building digital products, one line at a time. 🐾',
-    viewWork: 'View Work',
-    contactMe: 'Contact Me',
-    aboutTitle: 'About Me',
-    aboutDesc: 'Brief introduction about your background, experience, and interests.',
-    skillsTitle: 'Skills',
-    projectsTitle: 'Projects',
-    contactTitle: 'Get In Touch 🐾',
-    footer: '© 2026 xGANDAx. Built with React. 🐾',
-  },
-  es: {
-    home: 'inicio',
-    about: 'sobre mí',
-    projects: 'proyectos',
-    contact: 'contacto',
-    heroTitle: 'Hola, soy ',
-    heroRole: 'Ingeniero DevOps',
-    heroDesc: 'Construyendo productos digitales, línea a línea. 🐾',
-    viewWork: 'Ver Proyectos',
-    contactMe: 'Contáctame',
-    aboutTitle: 'Sobre Mí',
-    aboutDesc: 'Breve introducción sobre mi formación, experiencia e intereses.',
-    skillsTitle: 'Habilidades',
-    projectsTitle: 'Proyectos',
-    contactTitle: 'Contáctame 🐾',
-    footer: '© 2026 xGANDAx. Construido con React. 🐾',
-  }
-}
+import { translations } from './translations'
 
 function App() {
   const [lang, setLang] = useState('en')
@@ -88,7 +52,7 @@ function App() {
 
         <h2>{t.skillsTitle}</h2>
         <div className="skills-grid">
-          {['React', 'TypeScript', 'Node.js', 'Go', 'AWS', 'Docker', 'Kubernetes', 'Ansible', 'Google Cloud', 'Python', 'Terraform', 'Git', 'GitHub', 'CI/CD', 'DevOps', 'Jira', 'Markdown', 'Confluence', 'Prometheus', 'Grafana'].map(skill => (
+          {['React', 'TypeScript', 'Node.js', 'Go', 'AWS', 'Docker', 'Kubernetes', 'Ansible', 'Google Cloud', 'Python', 'Terraform', 'Git', 'GitHub', 'CI/CD', 'DevOps', 'Jira', 'Markdown', 'Confluence', 'Prometheus', 'Grafana', 'AI', 'BitBucket'].map(skill => (
             <span key={skill} className="skill-tag">{skill}</span>
           ))}
         </div>
@@ -96,7 +60,7 @@ function App() {
 
       {/* Projects Section */}
       <section id="projects" className="projects">
-        <h2>Projects</h2>
+        <h2>{t.projectsTitle}</h2>
         <div className="projects-grid">
           <div className="project-card">
             <h3>Demo Backstage</h3>
@@ -127,11 +91,10 @@ function App() {
 
       {/* Contact Section */}
       <section id="contact" className="contact">
-        <h2>Get In Touch 🐾</h2>
-        <p>email@example.com</p>
+        <h2>{t.contactTitle}</h2>
         <div className="social-links">
-          <a href="https://github.com/yourusername">GitHub</a>
-          <a href="https://linkedin.com/in/yourusername">LinkedIn</a>
+          <a href="https://github.com/xGANDAx">GitHub</a>
+          <a href="https://www.linkedin.com/in/jonathanchitiva/">LinkedIn</a>
         </div>
       </section>
 
